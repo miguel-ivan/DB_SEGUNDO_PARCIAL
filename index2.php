@@ -15,7 +15,7 @@ require_once '../lib/conexion.php';
     <div class="container my-5">
         <div class="row">
             <div class="col">
-            <h1>Usuarios <a href="insertar.php" class="btn btn-primary">Añadir</a></h1>
+            <h1>Usuarios <a href="insertar2.php" class="btn btn-primary">Añadir</a></h1>
             </div>
         </div>
         <div class="row">
@@ -24,9 +24,6 @@ require_once '../lib/conexion.php';
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Correos</th>
-                <th>Teléfono</th>
-                <th>Dirección</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -37,12 +34,9 @@ require_once '../lib/conexion.php';
            while($row = mysqli_fetch_assoc($result)){
             ?>
             <tr>
-                <td><?php echo $row['name'];?></td>
-                <td><?php echo $row['email']?></td>
-                <td><?php echo $row['phone']?></td>
-                <td><?php echo $row['addres'].",". $row['city']. ",". $row['state'] ?></td>
+                <td><?php echo $row['state'] ?></td>
                 <td>
-                    <a href="detalle.php " class="btn btn-success">Detalle</a>
+                    <a href="detalle2.php" class="btn btn-success">Detalle</a>
                     <a href="#" class="btn btn-warning">Editar</a>
                     <a href="#" class="btn btn-danger">Eliminar</a>
                 </td>
