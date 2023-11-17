@@ -12,6 +12,14 @@ require_once '../lib/conexion.php';
 
 </head>
 <body >
+<nav class = "navbar navbar-expand-lg bg-body-tertiary">
+    <ul class="navbar-nav">
+<li class="nav-item">
+    <a href="http://localhost/bases-de-datos/Usuarios/index.php" class="nav-link">Usuarios</a>
+</li>
+<li class="nav-item" >
+    <a href="http://localhost/bases-de-datos/Estados/index2.php#" class="nav-link">Estado</a>
+</li>
     <div class="container my-5">
         <div class="row">
             <div class="col">
@@ -36,8 +44,8 @@ require_once '../lib/conexion.php';
             <tr>
                 <td><?php echo $row['state'] ?></td>
                 <td>
-                    <a href="detalle2.php" class="btn btn-success">Detalle</a>
-                    <a href="#" class="btn btn-warning">Editar</a>
+                    <a href="detalle2.php ?id=<?php echo $row ['id']?>" class="btn btn-success">Detalle</a>
+                    <a href="editar2.php ?id=<?php echo $row ['id']?>" class="btn btn-warning">Editar</a>
                     <a href="#" class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>

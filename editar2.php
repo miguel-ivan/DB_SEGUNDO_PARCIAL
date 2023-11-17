@@ -2,13 +2,12 @@
 extract($_POST);
 
 if (isset ($_POST["register"]) 
-header ("Location: ../");
+header("Location: ../");
 exit();
 )
 require_once '../../lib/conexion.php';
 
-$query = "INSERT INTO usuarios (state)VALUES 
-('$estado')";
+$query = "UPDATE usuarios SET  '$cuidad', state = '$estado' WHERE id = $id";
 
 mysqli_query ($conex, $query);
 

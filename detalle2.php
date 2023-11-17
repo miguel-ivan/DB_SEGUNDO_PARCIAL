@@ -1,3 +1,8 @@
+<?php 
+require_once '../lib/conexion.php';
+ $id = $_GET['id'];
+?>
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +14,12 @@
 <body  class= "d-flex justify-content-center vh-100 align-items-center">
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Quintana Roo</h5>
-
+    <?php 
+    $query = "SELECT * FROM usuarios WHERE id = $id";
+    $result = mysqli_query($conex, $query);
+    $row = mysqli_fetch_assoc($result);
+    ?>
+    <h5 class="card-title"><?php echo $row['state']?></h5>
     <a href="index2.php" class="card-link">Regresar</a>
   </div>
 </div>

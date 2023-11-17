@@ -12,6 +12,15 @@ require_once '../lib/conexion.php';
 
 </head>
 <body >
+
+<nav class = "navbar navbar-expand-lg bg-body-tertiary">
+    <ul class="navbar-nav">
+<li class="nav-item">
+    <a href="index.php" class="nav-link">Usuarios</a>
+</li>
+<li class="nav-item" >
+    <a href="http://localhost/bases-de-datos/Estados/index2.php#" class="nav-link">Estado</a>
+</li>
     <div class="container my-5">
         <div class="row">
             <div class="col">
@@ -42,9 +51,9 @@ require_once '../lib/conexion.php';
                 <td><?php echo $row['phone']?></td>
                 <td><?php echo $row['addres'].",". $row['city']. ",". $row['state'] ?></td>
                 <td>
-                    <a href="detalle.php " class="btn btn-success">Detalle</a>
-                    <a href="#" class="btn btn-warning">Editar</a>
-                    <a href="#" class="btn btn-danger">Eliminar</a>
+                    <a href="detalle.php?id=<?php echo $row ['id']?>" class="btn btn-success">Detalle</a>
+                    <a href="editar.php?id=<?php echo $row ['id']?>" class="btn btn-warning">Editar</a>
+                    <a href="eliminar.php" class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>
             <?php }?>
