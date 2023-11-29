@@ -13,6 +13,16 @@ require_once '../lib/conexion.php';
 </head>
 <body  class= "d-flex justify-content-center vh-100 align-items-center">
     <div class="card" style="width: 18rem;">
+    <nav class = "navbar navbar-expand-lg bg-body-tertiary">
+    <ul class="navbar-nav">
+<li class="nav-item">
+    <a href="index.php" class="nav-link">Usuarios</a>
+</li>
+<li class="nav-item" >
+    <a href="http://localhost/bases-de-datos/Estados/index2.php#" class="nav-link">Estado</a>
+</li>
+</ul>
+</nav>
   <div class="card-body">
     <?php 
     $query = "SELECT * FROM usuarios WHERE id = $id";

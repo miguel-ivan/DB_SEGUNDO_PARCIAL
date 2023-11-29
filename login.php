@@ -1,27 +1,19 @@
 <?php
-require_once "conexion.php";
-
- $correo = $_POST ["email"];
- $password = $_POST ["password"];
- 
- if(!isset($correo) || empty($correo)){
-echo "Debes rellenar el campo Correo";
- }
- 
- if(!isset($password) || empty($password)){
-    echo "Debes rellenar el campo Contraseña";
-     }
-
- $consulta = "select * from usuarios where email = '$correo' and password = '$password'";
- $resultado = mysqli_query ($conex, $consulta);
-$registros = mysqli_num_rows ($resultado);
-
-if ($registros > 0){
-echo "bienvenido ". $correo;
-} else {
-   echo "usuario incorrecto";
+include("conexion.php");
+if (!empty($_POST["btningresar"])) {
+   if (empty($_POST["email"]) and empty($_POST ["password"])) {
+      echo "LOS CAMPOS ESTAN VACIOS";
+   } else {
+      $email=$_POST["email"];
+      $password=$_POST["password"];
+      $sql=$conex->query("SELECT * FROM usuarios WHERE email='$email' and password='$password'");
+      if ($datos=$sql->fetch_object()) {
+         header("Location:../Usuarios/index.php");
+      } else {
+         echo "ACCESO DENEGADO";
+      }
+      
+   }
+   
 }
-$_SESSION["newsession"]=$value;
-
-
-?>
+?> 

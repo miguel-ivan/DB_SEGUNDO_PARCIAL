@@ -13,7 +13,7 @@ require_once '../lib/conexion.php';
 </head>
 <body >
 
-<nav class = "navbar navbar-expand-lg bg-body-tertiary">
+<nav class = "navbar navbar-expand-lg navbar-light bg-light">
     <ul class="navbar-nav">
 <li class="nav-item">
     <a href="index.php" class="nav-link">Usuarios</a>
@@ -53,7 +53,7 @@ require_once '../lib/conexion.php';
                 <td>
                     <a href="detalle.php?id=<?php echo $row ['id']?>" class="btn btn-success">Detalle</a>
                     <a href="editar.php?id=<?php echo $row ['id']?>" class="btn btn-warning">Editar</a>
-                    <a href="eliminar.php" class="btn btn-danger">Eliminar</a>
+                    <a href="eliminar.php?id=<?php echo $row ['id']?>" class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>
             <?php }?>
