@@ -11,5 +11,5 @@ $query = "DELETE FROM usuarios WHERE id=$id";
 
 mysqli_query($conex, $query);
 
-header("Location: ../");
+header("Location: ../index2.php");
 ?>

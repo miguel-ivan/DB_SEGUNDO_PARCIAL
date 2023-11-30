@@ -1,7 +1,6 @@
 <?php
 require_once '../lib/conexion.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,6 @@ require_once '../lib/conexion.php';
 
 </head>
 <body >
-
 <nav class = "navbar navbar-expand-lg navbar-light bg-light">
     <ul class="navbar-nav">
 <li class="nav-item">
@@ -53,7 +51,7 @@ require_once '../lib/conexion.php';
                 <td>
                     <a href="detalle.php?id=<?php echo $row ['id']?>" class="btn btn-success">Detalle</a>
                     <a href="editar.php?id=<?php echo $row ['id']?>" class="btn btn-warning">Editar</a>
-                    <a href="eliminar.php?id=<?php echo $row ['id']?>" class="btn btn-danger">Eliminar</a>
+                    <a href="accions/eliminar.php?id=<?php echo $row ['id']?>" class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>
             <?php }?>

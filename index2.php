@@ -46,7 +46,7 @@ require_once '../lib/conexion.php';
                 <td>
                     <a href="detalle2.php ?id=<?php echo $row ['id']?>" class="btn btn-success">Detalle</a>
                     <a href="editar2.php ?id=<?php echo $row ['id']?>" class="btn btn-warning">Editar</a>
-                    <a href="#" class="btn btn-danger">Eliminar</a>
+                    <a href="accions/eliminar2.php?id=<?php echo $row ['id']?>"" class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>
             <?php }?>
